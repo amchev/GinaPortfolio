@@ -319,3 +319,15 @@ WebKit inertia scrolling is being added here for any present/future devices that
 .Right {
     width: 30%;
   }
+
+.head{
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #FFFFFF;
+    padding:15px;
+    -webkit-animation: fadeInAbout ease 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    margin-left:30%;
+
+}
