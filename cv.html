@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+          * {
+              box-sizing: border-box;
+          }
+          /*This just stops me getting horizontal scrolling if anything overflows the width*/
+          body {
+              overflow-x: hidden;
+          }
+          /*Just removing default browser padding/margin*/
+
+          html,
+          body {
+              padding: 0;
+              margin: 0;
+              color: #ebebeb;
+          }
+          .subtitle{
+            font-size: 30px;
+            display:block;
+          }
+          .box{
+            width: 80%;
+            border-style:solid;
+            margin:10%;
+            height: 200px;
+            float:center;
+            border-radius:10%;
+            font-size:20px;
+          }
+          .Brown{
+            padding:30px;
+            transition:1.5s;
+          }
+          .CSLB{
+            padding:30px;
+            height:250px;
+            transition:1.5s;
+          }
+          .Skills{
+            padding:20px;
+            height:135px;
+            line-height:15px;
+            transition:1.5s;
+          }
+          .description{
+            font-size:14px;
+          }
+          .descriptionPro{
+            font-size:16px;
+            line-height:16px;
+          }
+          .Software{
+            line-height:16px;
+            height:100px;
+            font-size:15px;
+            padding:20px;
+            transition:1.5s;
+          }
+          .Work{
+            height:280px;
+            padding:10px;
+            font-size:18px;
+            transition:1.5s;
+          }
+          #sreip{
+            height:240px;
+          }
+          /* 51BDFF */
+          .Projects{
+            padding:20px;
+            height:240px;
+          }
+          .toVR{
+            background-color:#80A9D4;
+            font-family: 'Montserrat', sans-serif;
+            color:'#ebebeb';
+          }
+        </style>
+    </head>
+    <body>
+      <script>
+        function highlightBrown(){
+          var highlightList = document.getElementsByClassName("Brown");
+          highlightList[0].style.backgroundColor='#D4E8FF';
+          highlightList[0].style.color='#828282';
+
+          var workList = document.getElementById("grad");
+          workList.style.backgroundColor='#D4E8FF';
+          workList.style.color='#828282';
+
+          var spanHighlight = document.getElementsByClassName("special");
+          for (var i = 0; i < spanHighlight.length; i++){
+            spanHighlight[i].style.textDecoration = "underline";
+            spanHighlight[i].style.textDecorationStyle =  "double";
+            spanHighlight[i].style.textDecorationColor= "#80A9D4";
+          }
+          var soft = document.getElementsByClassName("Software");
+          soft[0].style.backgroundColor='#D4E8FF';
+          soft[0].style.color='#828282';
+
+          var skill = document.getElementsByClassName("Skills");
+          skill[0].style.backgroundColor='#D4E8FF';
+          skill[0].style.color='#828282';
+        }
+        function dehighlightBrown(){
+          var highlightList = document.getElementsByClassName("Brown");
+          highlightList[0].style.backgroundColor='#80A9D4';
+          highlightList[0].style.color='#ebebeb';
+
+          var workList = document.getElementById("grad");
+          workList.style.backgroundColor='#80A9D4';
+          workList.style.color='#ebebeb';
+
+          var spanHighlight = document.getElementsByClassName("special");
+          for (var i = 0; i < spanHighlight.length; i++){
+            spanHighlight[i].style.textDecoration = "none";
+          }
+          var soft = document.getElementsByClassName("Software");
+          soft[0].style.backgroundColor='#80A9D4';
+          soft[0].style.color='#ebebeb';
+
+          var skill = document.getElementsByClassName("Skills");
+          skill[0].style.backgroundColor='#80A9D4';
+          skill[0].style.color='#ebebeb';
+        }
+        function highlightCSLB(){
+          var highlightList = document.getElementsByClassName("CSLB");
+          highlightList[0].style.backgroundColor='#D4E8FF';
+          highlightList[0].style.color='#828282';
+
+          var workList = document.getElementById("undergrad");
+          workList.style.backgroundColor='#D4E8FF';
+          workList.style.color='#828282';
+
+          var spanHighlight = document.getElementsByClassName("cslbSpecial");
+          for (var i = 0; i < spanHighlight.length; i++){
+            spanHighlight[i].style.textDecoration = "underline";
+            spanHighlight[i].style.textDecorationStyle =  "double";
+            spanHighlight[i].style.textDecorationColor= "#80A9D4";
+          }
+
+          var soft = document.getElementsByClassName("Software");
+          soft[0].style.backgroundColor='#D4E8FF';
+          soft[0].style.color='#828282';
+
+          var skill = document.getElementsByClassName("Skills");
+          skill[0].style.backgroundColor='#D4E8FF';
+          skill[0].style.color='#828282';
+        }
+        function dehighlightCSLB(){
+          var highlightList = document.getElementsByClassName("CSLB");
+          highlightList[0].style.backgroundColor='#80A9D4';
+          highlightList[0].style.color='#ebebeb';
+
+          var workList = document.getElementById("undergrad");
+          workList.style.backgroundColor='#80A9D4';
+          workList.style.color='#ebebeb';
+
+          var spanHighlight = document.getElementsByClassName("cslbSpecial");
+          for (var i = 0; i < spanHighlight.length; i++){
+            spanHighlight[i].style.textDecoration = "none";
+          }
+          var soft = document.getElementsByClassName("Software");
+          soft[0].style.backgroundColor='#80A9D4';
+          soft[0].style.color='#ebebeb';
+
+          var skill = document.getElementsByClassName("Skills");
+          skill[0].style.backgroundColor='#80A9D4';
+          skill[0].style.color='#ebebeb';
+        }
+        function sreipHighlight(){
+          var highlightList = document.getElementById("sreip");
+          highlightList.style.backgroundColor='#D4E8FF';
+          highlightList.style.color='#828282';
+
+          var spanHighlight = document.getElementsByClassName("sreipSpecial");
+          for (var i = 0; i < spanHighlight.length; i++){
+            spanHighlight[i].style.textDecoration = "underline";
+            spanHighlight[i].style.textDecorationStyle =  "double";
+            spanHighlight[i].style.textDecorationColor= "#80A9D4";
+          }
+        }
+        function sreipDeHighlight(){
+          var highlightList = document.getElementById("sreip");
+          highlightList.style.backgroundColor='#80A9D4';
+          highlightList.style.color='#ebebeb';
+        }
+        </script>
+    <div class="Top">Gina Vimbela M.S. <br>
+      <span class="subtitle">  Engineer @ Applied Medical</span>
+    </div>
+    <hr>
+
+    <div class="Container">
+        <div class="Left"> <span class="subtitle"> Education  </span>
+          <div class ="box Brown" onmouseover="highlightBrown();" onmouseout="dehighlightBrown();">
+            Master's of Science <br>
+            Biomedical Engineering <br><br>
+            Brown Univerity<br>
+            May 2019 <br>
+            <img src="brown.png" width="15" height="25">
+          </div>
+          <div class ="box CSLB" onmouseover='highlightCSLB();' onmouseout="dehighlightCSLB();">
+            Bachelor's of Science <br>
+            Chemical Engineering <br><br>
+            <span style="font-size:15px"><b>California State University - Long Beach </b></span><br>
+            May 2017<br><br>
+            <span style="font-size:15px">Member of Tau Beta Pi</span><br>
+            <img src="cslb.png" width="25" height="25">
+            <img src="tbp.png" width="25" height="25">
+          </div>
+          <div style="height:500px"></div>
+        </div>
+        <div class="Middle"> <span class="subtitle">Engineering Experience </span>
+
+          <div class ="box Work" id="grad" onmouseover="highlightBrown();" onmouseout="dehighlightBrown();">
+            <b>Graduate Student Research Assistant</b><br>
+            <span style="font-size:15px">Sep 2017 - May 2019<br></span><br>
+          · <span class="special">Investigate</span> and <span class="special">optimize</span> micro-blood sampling techniques
+          for screening of <span class="special">metobolic and infectious diseases</span> in collaboration with <span class="special">PerkinElmer Inc.</span><br><br>
+          · <span class="special">Design</span> and <span class="special">prototype</span> water pollution <span class="special">bioreporter detection technologies</span>
+          using microbes and recombinant DNA.
+          </div>
+          <div class ="box Work" id="undergrad" onmouseover='highlightCSLB();' onmouseout="dehighlightCSLB();">
+            <b>Building Infrastructure Leading Diversity (BUILD) Scholar</b> <br>
+            <span style="font-size:15px">Jun 2015 - Jun 2017<br></span><br>
+          · Modify and enhance <span class="cslbSpecial">MATLAB model</span> of diffusion in a chemotactic environment for <span class="cslbSpecial">investigation of cell
+            force generation</span><br><br>
+          · <span class="cslbSpecial">Design</span> and <span class="cslbSpecial">research</span> a new <span class="cslbSpecial">nanomaterial</span> to assist in heart tissue growth after a heart attack.
+          </div>
+          <div class ="box Work" id="sreip" onmouseover="sreipHighlight();" onmouseout="sreipDeHighlight();">
+            <b>Leadership Alliance SR - EIP</b><br><br>
+            <span style="font-size:15px"><em>Brown University & Rhode Island Hospital </em></span><br>
+            <span style="font-size:15px">Jun 2016 - Aug 2016</span><br><br>
+          · <span class="sreipSpecial">Develop code-based pipeline</span> for production of <span class="sreipSpecial">informational visualizations</span> of lipid ion alterations for investigation of
+            <span class="sreipSpecial">White Matter Diseases</span>.
+          </div>
+          <div style="height:500px">
+
+          </div>
+        </div>
+        <div class="Right">
+          <span class="subtitle">Skills</span>
+          <div class ="box Software">
+            <span style="font-size:20px"><b>Computer Software</b></span><br><br>
+              <span class="special cslbSpecial">MATLAB</span>, R, <span class="special cslbSpecial">LaTeX</span>, Adobe Illustrator, CSS/HTML
+          </div>
+          <div class ="box Skills">
+            <b>Lab Techniques</b><br><br>
+            <span class="description"><span class="cslbSpecial">Cell & Microbial Culturing</span>, <span class="cslbSpecial">Confocal & Fluorescence Microscopy</span>,
+              <span class="special">qPCR</span>, <span class="special">Capillary Electrophoresis</span>, <span class="special">Recombinant DNA Technology</span>, Protein Assays</span>
+          </div>
+          <span class="subtitle">Projects</span>
+          <div class ="box Projects">
+            <b>Center for Computation & Visualization </b><br><br>
+            <div class="descriptionPro">Develop a 3D vessel map of tissue
+              engineered hearts from microCT data sets in the YURT virtual reality theather.</div><br>
+              <button class="toVR" onclick="window.location.href = 'vr.html';"> Explore VR Project</button>
+          </div>
+          <div style="height:500px"></div>
+        </div>
+      </div>
+    </div class="Container">
+
+    </body>

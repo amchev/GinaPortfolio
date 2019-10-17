@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic&display=swap" rel="stylesheet">
+      <style>
+
+        .virtual {
+            /*background-color:	#F08080;*/
+            background-color: #54535D;
+            -webkit-animation: fadeInBackground ease 2s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-fill-mode: forwards;
+        }
+        .parallax-container {
+          width:840px;
+          height: 500px;
+        }
+        #myVideo {
+          position: fixed;
+          margin-left:0px;
+          margin-right:0px;
+          margin-top:0px;
+          margin-bottom:0px;
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          min-width: 100%;
+          min-height: 100%;
+          opacity: 0;
+          z-index: -1;
+        }
+        @media only screen and (max-width: 640px){
+          #myVideo {
+            position: fixed;
+            margin-left:0px;
+            margin-right:0px;
+            margin-top:0px;
+            margin-bottom:0px;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 0;
+            z-index: 10;
+          }
+        }
+        @media only screen and (max-width: 640px){
+          .parallax-container {
+            height:370px;
+          }
+        }
+
+        @keyframes fadeInBackground {
+          from {
+              background-color: #80A9D4;
+          }
+          to {
+              background-color: #54535D;
+
+           }
+        }
+        @media only screen and (max-width: 640px){
+        .spacer{
+          height: 400px;
+        }
+      }
+      @media only screen and (max-width: 640px){
+        .VRcontent{
+          width: 800px;
+          height: 1700px;
+        }
+      }
+      </style>
+    </head>
+    <body class="virtual">
+    <button onclick="window.location.href = 'index.html';" class="homepageButton">BACK</button>
+    <div class="parallax-container">
+      <video autoplay muted loop id="myVideo" width="840" height="1000">
+        <source src="3D_screencapture.mp4" type="video/mp4">
+      </video>
+    </div>
+      <div class="VRcontent">
+        <div class="vr"> 3D Cappilary Vessels<br> in VR </div>
+        <br>
+        <br>
+        <br>
+        <div class="spacer"></div>
+        <p class="aboutVR">
+           Developing a therapy to repair or replace damaged heart tissue rather
+          than replace a whole heart, could be invaluable for bettering patient
+          outcomes. Developing such a therapy requires engineering 3D heart tissues in a lab that reflect the nature
+          of the native heart tissues. One of the major roadblocks to engineering tissues is inducing vascularization. Induction of blood vessels into the tissue,
+          or Vascularization, is vital to the survival of the tissue. If blood vessels do not distribute evenly and quickly throughout the tissue, then the tissue will
+          die due to lack of blood flow. Investigating how vascularization occurs in these heart constructs in vivo is important for developing viable engineered heart
+          tissue. This particular dataset is a Micro-CT image stack taken from a casted blood vessels of a mouse heart from the Coulombe lab at Brown University. Micro-CT imaging allows for visualizing the morphology of new vesselformation in animal models and elucidates the efficacy of
+          various molecular engineering techniques in facilitating heart muscle
+          tissue replacement. The whole-heart vessel maps hold information
+          about what kind of vessels, where vessels originate from, and how
+          they integrate into the graft. Viewing these small vessels in an
+          immersive virtual reality setting allows for full resolution of the capillary integration.
+        <br>
+      <br>
+          This project was built using kitware's paraview VR module. </p>
+    </div>
+    <script>
+      /*var e = document.getElementById("myVideo");
+      e.style.opacity = "0";*/
+
+      var vid = document.getElementById("myVideo");
+      vid.oncanplaythrough = function() {
+        setTimeout(function() {
+            var e = document.getElementById('myVideo');
+            fade(e);
+        }, 1000);
+      };
+
+      function fade(element) {
+        var op = 0;
+        var timer = setInterval(function() {
+            if (op >= 1) clearInterval(timer);
+            element.style.opacity = op;
+            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+            op += op * 0.1 || 0.1;
+        }, 50);
+      }
+    </script>
+    </body>
+
+
+
+
+  </body>

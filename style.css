@@ -1,0 +1,321 @@
+body{
+  background-color: #80A9D4;
+  -webkit-animation: fadeIn ease 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Nanum Gothic', sans-serif;*/
+  font-size: 200px;
+  color: #D6E0EB;
+  line-height: 160px;
+  letter-spacing: -25px;
+}
+.column1{
+  width: 60%;
+  float: left;
+}
+.column2{
+  margin-top: 130px;
+  margin-left: 20px;
+  width:38%;
+  float: right;
+}
+.row{
+  width:100%;
+  display: table;
+  float: left;
+}
+.navButtons{
+  margin-top: 50px;
+  text-align: center;
+  width:80%;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  background-color: #80A9D4;
+  border:none;
+  float: right;
+}
+
+.underline--magical {
+  background-image: linear-gradient(120deg, #C3C3C3 0%, #CBE3FF 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+.underline--magical:hover{
+  background-size: 100% 88%;
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa{
+  margin-left:50%;
+}
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+/********** SLIDESHOWW **********/
+.publications {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  margin-top: 20px;
+  max-height: 600px;
+  max-width:600px;
+  position: relative;
+  margin: auto;
+  box-shadow: 6px 6px 0 -6px black, 8px 0 6px -8px black;
+}
+.slideshow-container:before, .slideshow-container:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  transform: rotate(-3deg);
+}
+
+.slideshow-container:after {
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+.pubs{
+  font-family: 'Montserrat', sans-serif;
+  font-size:140px;
+  color: #D6E0EB;
+  letter-spacing: -20px;
+  font-size: 130px;
+  text-align:center;
+  margin-top:20px;
+}
+
+/********** VR ********/
+
+.VRcontent {
+  font-family: 'Montserrat', sans-serif;
+  color: #F6F6F6;
+  font-size: 20px;
+  line-height: 1.45;
+}
+.vr {
+  font-family: 'Montserrat', sans-serif;
+  color:  #FFFFFF;
+  opacity: 0.7;
+  letter-spacing: -0.06em;
+  font-size: 60px;
+  -webkit-animation: fadeInTitle ease 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+.aboutVR{
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  opacity: 1;
+}
+
+/**** Homepage Button *****/
+
+/*  DOT COLOR #F08080*/
+.homepageButton{
+  float: left;
+  left: 5px;
+  top: 5px;
+  src:url("index.html");
+  border-style: solid;
+  border-color:#FFFFFF;
+  border-width: 2px;
+  transition:1s;
+  background-color: transparent;
+  width:50px;
+  font-size:10px;
+}
+.homepageButton:hover{
+  transition:1s;
+  background-color: #FFFFFF;
+}
+
+/************  CV ************/
+
+
+/*Flexbox gives us the flexiness we need. The top just stays put as there is no scrolling on the body due to the page never exceeding viewport height*/
+.Top {
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    position: relative;
+    z-index: 10;
+    height: 250px;
+}
+/*This is our main wrapping element, it's made 100vh high to ensure it is always the correct size and then moved into place and padded with negative margin and padding*/
+.Container {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    margin-top: -100px;
+    padding-top: 100px;
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: overflow;
+    text-align: center;
+    margin-bottom: 40px;
+}
+/*All the scrollable sections should overflow and be whatever height they need to be. As they are flex-items (due to being inside a flex container) they could be made to stretch full height at all times if needed.
+WebKit inertia scrolling is being added here for any present/future devices that are able to make use of it.
+*/
+.Left,
+.Middle,
+.Right {
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    overflow: auto;
+    height: auto;
+    padding: .5rem;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+}
+/*Entirely optional – just wanted to remove the scrollbar on WebKit browsers as I find them ugly*/
+.Left::-webkit-scrollbar,
+.Middle::-webkit-scrollbar,
+.Right::-webkit-scrollbar {
+    display: none;
+}
+/*  Left and Right are set sizes while the Middle is set to flex one so it occupies all remaining space. This could be set as a width too if prefereable, perhaps using calc.*/
+.Left {
+    width: 33%;
+    text-align:center;
+    float:center;
+}
+
+.Middle {
+    width: 33%;
+    flex: 1;
+}
+
+.Right {
+    width: 30%;
+  }
